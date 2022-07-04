@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h2 style="color:gold";>Found Items</h2>
+
+
+<table class="w3-table-all">
+<tr>
+  <th>Item name</th>
+  <th>Location</th>   
+  <th>Description</th>  
+</tr>
+{%for item in Found_Items%}
+<tr>
+  <td>
+<!-- Item Name -->
+<p style=>{{item.item_name}}</p>
+</td>
+<!-- Where Item Was found -->
+<td>
+<p style=>{{item.where_found}}</p>
+</td>
+<!-- Item Description -->
+<td>
+<p style=>{{item.description}}</p>
+</td>
+</tr>
+  {%endfor%}
+
+</table>
+
+{% endblock %}

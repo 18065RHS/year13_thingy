@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h2 style="color:gold";>Lost Items</h2>
+
+<table class="w3-table-all">
+<tr>
+  <th>Item name</th>
+  <th>Location</th>   
+  <th>Description</th>  
+</tr>
+{%for item in Lost_Items%}
+<tr>
+  <td>
+<!-- Item Name -->
+<p style=>{{item.item_name}}</p>
+</td>
+<!-- Where Item Was Lost -->
+<td>
+<p style=>{{item.where_lost}}</p>
+</td>
+<!-- Item Description -->
+<td>
+<p style=>{{item.description}}</p>
+</td>
+</tr>
+  {%endfor%}
+
+</table>
+  
+{% endblock %}
